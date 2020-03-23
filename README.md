@@ -12,4 +12,4 @@ Tampermonkey script to let you know what account you're logged into and with wha
 Done!
 
 ## Note
-This is intended to work with the default Control Tower / AWS SSO setup where the looged in account name shows as `AWSReservedSSO_RoleName_12345abcdef...`
+This is intended to work with the AWS Single Sign-On setup where the logged in user shows as `AWSReservedSSO_RoleName_12345abcdef...`
