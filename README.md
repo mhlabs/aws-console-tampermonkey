@@ -1,8 +1,8 @@
 # aws-console-tampermonkey
 
 ## Install
-1. Install (Tampermonkey)[https://tampermonkey.net/]
-2. Copy content of desired script under [https://github.com/mhlabs/aws-console-tampermonkey/blob/master/scripts]
+1. Install [Tampermonkey](https://tampermonkey.net/)
+2. Copy content of desired script under [/scripts](https://github.com/mhlabs/aws-console-tampermonkey/blob/master/scripts)
 3. In your browser, click the Tampermonkey icon and select "Create a new script"
 4. Paste script and hit save
 
