@@ -2,7 +2,7 @@
 // @name         AWS SSO Account Alert
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Display AWS account and assumed role in a colour coded fashion!
+// @description  Display AWS account and assumed role in a colour coded fashion
 // @author       mhlabs
 // @match        https://*.console.aws.amazon.com/*
 // @grant        none
