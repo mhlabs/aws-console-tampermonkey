@@ -8,15 +8,21 @@
 // ==/UserScript==
 
 var region = location.href.split(".")[0].split("/")[2];
+function functionName() {
+  try {
+    return (
+      "/aws/lambda/" + location.href.split("/functions/")[1].split("?")[0]
+    ).replace("/", "*2f");
+  } catch (err) {
+    return null;
+  }
+}
 
 (function() {
   "use strict";
-  var functionName = (
-    "/aws/lambda/" + location.href.split("/functions/")[1].split("?")[0]
-  ).replace("/", "*2f");
   var lambdaContainer = document.getElementsByClassName("awsui-tabs-header")[0];
   if (lambdaContainer) {
-    lambdaContainer.append(tamperLambda(functionName));
+    lambdaContainer.append(tamperLambda(functionName()));
   }
 })();
 
@@ -42,12 +48,7 @@ function mutationHandler(mutationRecords) {
         if (checkForCSS_Class(mutation.addedNodes[j], "awsui-tabs-header")) {
           var lambdaContainer = mutation.addedNodes[j];
           if (lambdaContainer) {
-            var functionName = (
-              "/aws/lambda/" +
-              location.href.split("/functions/")[1].split("?")[0]
-            ).replace("/", "*2f");
-
-            lambdaContainer.append(tamperLambda(functionName));
+            lambdaContainer.append(tamperLambda(functionName()));
           }
         }
       }
