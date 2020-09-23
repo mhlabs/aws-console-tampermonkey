@@ -30,14 +30,3 @@ These three scripts solve three separate, but related navigation use cases;
 Adds a button that links to the CloudWatch Logs Insights console for the current Lambda function 
 
 ![Screenshot](https://github.com/mhlabs/aws-console-tampermonkey/blob/master/images/lambda-to-insights.png?raw=true)
-
-### AWS CloudWatch Logs to Logs Insights (cloudwatch-logs-to-insights.js) 
-Adds a link to the Insights console from the breadcrumbs in CloudWatch Logs 
-
-![Screenshot](https://github.com/mhlabs/aws-console-tampermonkey/blob/master/images/logs-to-insights.png?raw=true)
-
-### AWS CloudWatch Logs Insights to Log Stream (cloudwatch-insights-to-log-stream.js) 
-Adds a link to a log row in Insights that leads to the log in its log stream. Useful when you want to see a logged event in its context.
-
-![Screenshot](https://github.com/mhlabs/aws-console-tampermonkey/blob/master/images/insights-to-log-stream.png?raw=true)
-
