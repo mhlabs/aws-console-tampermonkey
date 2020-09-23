@@ -2,7 +2,7 @@
 // @name         AWS SSO Account Alert
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Display AWS account and assumed role in a colour coded fashion
+// @description  Display AWS account and assumed role in a colour coded fashion!
 // @author       mhlabs
 // @match        https://*.console.aws.amazon.com/*
 // @grant        none
@@ -11,15 +11,14 @@
 (function() {
   "use strict";
   var role = document
-    .getElementById("awsc-login-display-name-user")
+    .getElementById("nav-usernameMenu")
     .innerHTML.split("_")[1];
-  var account = document.getElementById("awsc-login-display-name-account")
-    .innerHTML;
-
-  var container = document.getElementById("nav-menu-right");
+  var account = document.querySelector("span[data-testid='aws-my-account-details']")
+    .innerText;
+  var container = document.querySelector("button[data-testid='awsc-phd__bell-icon']");
   var elem = document.createElement("span");
   elem.className = "nav-elt mh-account";
-  elem.innerHTML = `<strong>Account:</strong> ${account}<br/><strong>Role:</strong> ${role}`;
+  elem.innerHTML = `<strong>Account:</strong> ${account} | <strong>Role:</strong> ${role}`;
 
   container.prepend(elem);
   var style = document.createElement("style");
