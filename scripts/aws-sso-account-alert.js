@@ -13,8 +13,7 @@
   var role = document
     .getElementById("nav-usernameMenu")
     .innerHTML.split("_")[1];
-  var account = document.querySelector("span[data-testid='aws-my-account-details']")
-    .innerText;
+  var account = document.querySelector("div[data-testid='account-detail-menu'] div div span:nth-child(2)").innerText;
   var container = document.querySelector("button[data-testid='awsc-phd__bell-icon']");
   var elem = document.createElement("span");
   elem.className = "nav-elt mh-account";
